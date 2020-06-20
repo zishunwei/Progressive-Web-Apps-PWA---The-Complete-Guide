@@ -10,3 +10,8 @@ self.addEventListener('activate', function (event) {
     // 这会在由此service worker 控制的任何 clients 中触发 navigator.serviceWorker  上的  "controllerchange"  事件.
     }
 );
+
+self.addEventListener('fetch', function (event) {
+    console.log('[Service Worker] Fetching something ...', event);
+
+});
